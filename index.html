@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/waltograph" type="text/css"/>
+  </head>
+  <body>
+    <header>
+      <h1>Disney Movie Matching Game</h1>
+    </header>
+    <section id="game-container">
+      <div id="ui-container">
+        <h3>Flips: <span id="flip-count">0</span></h3>
+        <h3>Matches: <span id="match-count">0</span></h3>
+      </div>
+      <div id="message-container">
+        <div id="win-message" class="hidden">
+          <h2>Congrats, You Win! 🏆</h2>
+          <button id="play-again" onclick="playAgain()"><h3>Wanna Play Again?</h3></button>
+        </div>
+      </div>
+      <div id="card-container">
+      </div>
+        <!-- Uncomment the next four lines to help you experiment. But be sure to comment it back out before finalizing your app, since your JavaScript should be adding these elements instead! -->
+        <!-- <div class="card" >
+          <div class="card-down"></div>
+          <div class="card-up"></div>
+          </div> -->
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.1/underscore.js" integrity="sha512-qbJl2/KyecDVJdgAwr0Gzhm5KBmkzdUouG+sKmCWP1Idb144ZnfSmCRReuYXPEHIa4j38TwrR2ySeGoFH5gKzA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="tests.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
