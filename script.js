@@ -1,5 +1,9 @@
+/** Disney Match Up Card Game */
+
+// appendNewCard adds a single new card element to the page by taking in a parent HTML element as a parameter named 'parentElement'.
 function appendNewCard(parentElement) {
-  // a variable named cardElement is assigned to a new div element.
+  
+  // A variable named cardElement is assigned to a new div element.
   let cardElement = document.createElement("div");
   
   // The "card" class is added to the card element.
@@ -15,11 +19,7 @@ function appendNewCard(parentElement) {
   return(cardElement);
 }
 
-appendNewCardTest();
-
-// shuffleCardImageClasses() generate a random array with two of each image class string and returns an array of 12 randomly ordered image classes.
-
-// An array of 2 of each image class strings in-order
+// shuffleCardImageClasses() generates a random array with two of each image class string and returns an array of 12 randomly ordered 2 paired image classes.
 function shuffleCardImageClasses() {
   let cardImages = [
     "image-1", "image-1", 
@@ -29,18 +29,29 @@ function shuffleCardImageClasses() {
     "image-5", "image-5",
     "image-6", "image-6"
   ];
-
+  
+  // Use the shuffle library to randomly "shuffle" the cardImages array
   result = _.shuffle(cardImages);
-
+  
+  // return the shuffled cardImages array.
   return(result);
 }
 
-shuffleCardImageClassesTest();
+// the createCards function will create a card, assign it a random image class, and create an object to represent that card in the program.
 
+// The 'parentElement' parameter is the DOM element where the cards should be appended as children. 
+// The 'shuffledImageClasses' parameter is an array of 12 image class strings randomly ordered and with 2 strings from each image class.
 function createCards(parentElement, shuffledImageClasses) {
+  
+  // An empty array that holds the card objects.
   let cardObject = [];
+  
+  // Loop it 12 times to create the 12 cards needed.
   for (let i = 0; i < 12; i++){
+    
+    // AppendNewCard creates/appends a new card and stores the result in a variable.
     let newCard = appendNewCard(parentElement);
+    
     
     newCard.classList.add(shuffledImageClasses[i]);
     
