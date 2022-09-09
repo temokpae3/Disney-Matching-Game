@@ -1,17 +1,25 @@
 function appendNewCard(parentElement) {
+  // a variable named cardElement is assigned to a new div element.
   let cardElement = document.createElement("div");
   
+  // The "card" class is added to the card element.
   cardElement.classList.add("card");
   
+  // The HTML for the children of the card element (card-down and card-up) is a normal string and is assigned to the innerHTML of the card element.
   cardElement.innerHTML = "<div class=card-down></div> <div class=card-up></div>";
   
+  // The card element is appended to the parentElement, making the card element a "child".
   parentElement.appendChild(cardElement);
   
+  // Return the card element.
   return(cardElement);
 }
 
 appendNewCardTest();
 
+// shuffleCardImageClasses() generate a random array with two of each image class string and returns an array of 12 randomly ordered image classes.
+
+// An array of 2 of each image class strings in-order
 function shuffleCardImageClasses() {
   let cardImages = [
     "image-1", "image-1", 
